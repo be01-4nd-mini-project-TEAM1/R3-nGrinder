@@ -7,3 +7,10 @@
 $ wget https://github.com/naver/ngrinder/releases/download/ngrinder-3.5.2-20200929/ngrinder-controller-3.5.2.war
 $ java -jar ngrinder-controller-{version}.war
 ```
+### nGrinder Controller Port-Forwarding
+- 다른 PC에서 사설 IP로 컨트롤러 PC에 접속하기 위한 세팅
+- 윈도우 터미널에서 관리자 권한으로 실행 후 다음과 같이 입력
+```sh
+$ netsh interface portproxy add v4tov4 listenport=8080 listenaddress=0.0.0.0 connectport=8080 connectaddress=[WSL 할당 IP]
+```
+- 사설 IP의 8080 포트로 실행된 Controller 페이지 진입 확인
