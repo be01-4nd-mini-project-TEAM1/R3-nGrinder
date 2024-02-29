@@ -18,6 +18,7 @@ $ netsh interface portproxy add v4tov4 listenport=8080 listenaddress=0.0.0.0 con
 
 ### AGENT setting
 - controller ip:지정 Port 로 접속 후 agent tar download
+
 ![image](https://github.com/be01-4nd-mini-project-TEAM1/R3-nGrinder/assets/102152330/89997bce-899e-408e-ba10-d69d095a89c4)
 
 - 다운로드한 tar 압축 해제
@@ -38,4 +39,8 @@ monitor.binding_port=13243
 ```
 ./run_agent.sh
 ```
+
+- agent 접속 확인
+
+![image](https://github.com/be01-4nd-mini-project-TEAM1/R3-nGrinder/assets/102152330/e2a7f4a4-fe74-4dc3-841f-732087ae7944)
 
