@@ -14,3 +14,28 @@ $ java -jar ngrinder-controller-{version}.war
 $ netsh interface portproxy add v4tov4 listenport=8080 listenaddress=0.0.0.0 connectport=8080 connectaddress=[WSL 할당 IP]
 ```
 - 사설 IP의 8080 포트로 실행된 Controller 페이지 진입 확인
+
+
+### AGENT setting
+- controller ip:지정 Port 로 접속 후 agent tar download
+![image](https://github.com/be01-4nd-mini-project-TEAM1/R3-nGrinder/assets/102152330/89997bce-899e-408e-ba10-d69d095a89c4)
+
+- 다운로드한 tar 압축 해제
+```
+$ tar -xvf [agent tar file]
+```
+
+- __agent.conf file setting
+```
+$ cd ngrinder-agent
+$ vi __agent.conf
+common.start_mode=monitor
+agent.controller_host=192.168.0.43
+monitor.binding_port=13243
+```
+
+- run agent server
+```
+./run_agent.sh
+```
+
